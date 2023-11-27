@@ -1,0 +1,29 @@
+<!-- employees/templates/employees/employee_list.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Employee List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th><a href="?sort=full_name">Full Name</a></th>
+        <th><a href="?sort=position">Position</a></th>
+        <th><a href="?sort=hire_date">Hire Date</a></th>
+        <th><a href="?sort=salary">Salary</a></th>
+        <!-- Добавьте другие поля, если необходимо -->
+      </tr>
+    </thead>
+    <tbody>
+      {% for employee in employees %}
+        <tr>
+          <td>{{ employee.full_name }}</td>
+          <td>{{ employee.position }}</td>
+          <td>{{ employee.hire_date }}</td>
+          <td>{{ employee.salary }}</td>
+          <!-- Добавьте другие поля, если необходимо -->
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

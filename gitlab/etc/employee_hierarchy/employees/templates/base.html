@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Your Site{% endblock %}</title>
+    <!-- Добавьте здесь ваши стили, скрипты и другие мета-теги -->
+</head>
+<body>
+    <header>
+        <h1>Site Header</h1>
+        <!-- Добавьте здесь элементы навигации, логотип и т.д. -->
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Roboeggs</p>
+        <!-- Добавьте здесь другие элементы подвала -->
+    </footer>
+
+    <!-- Добавьте здесь ваши скрипты и другие элементы -->
+</body>
+</html>

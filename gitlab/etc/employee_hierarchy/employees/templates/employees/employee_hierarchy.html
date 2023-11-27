@@ -1,0 +1,27 @@
+<!-- employees/employee_hierarchy.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Hierarchy</title>
+</head>
+<body>
+    <h1>Employee Hierarchy</h1>
+    <ul>
+        {% for employee in employees %}
+            <li>
+                {{ employee.full_name }}
+                {% if employee.photo %}
+                    <img src="{{ employee.photo.url }}" alt="{{ employee.full_name }} photo">
+                {% endif %}
+                {% if employee.children.all %}
+                    <ul>
+                        {% for child in employee.children.all %}
+                            <li>{{ child.full_name }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
